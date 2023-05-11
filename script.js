@@ -10,9 +10,19 @@ const lookup = {
   'Y': 'L','Z': 'M', '?': '?', ',': ','
 };
 
-function rot13(encodedStr){
+function rot13(str){
    let decodedArr = []; // Your Result goes here
   // Only change code below this line
+	 for (var i = 0; i < str.length; i++) {
+    var code = str.charCodeAt(i);
+    if (code >= 65 && code <= 90) {
+      decoded += String.fromCharCode(((code - 65 + 13) % 26) + 65);
+    } else if (code >= 97 && code <= 122) {
+      decoded += String.fromCharCode(((code - 97 + 13) % 26) + 97);
+    } else {
+      decoded += str.charAt(i);
+    }
+  }
 
   return ;//return decodedArr
 }
