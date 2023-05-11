@@ -16,11 +16,11 @@ function rot13(str){
 	 for (var i = 0; i < str.length; i++) {
     var code = str.charCodeAt(i);
     if (code >= 65 && code <= 90) {
-      decoded += String.fromCharCode(((code - 65 + 13) % 26) + 65);
+      decodedArr += String.fromCharCode(((code - 65 + 13) % 26) + 65);
     } else if (code >= 97 && code <= 122) {
-      decoded += String.fromCharCode(((code - 97 + 13) % 26) + 97);
+      decodedArr += String.fromCharCode(((code - 97 + 13) % 26) + 97);
     } else {
-      decoded += str.charAt(i);
+      decodedArr += str.charAt(i);
     }
   }
 
